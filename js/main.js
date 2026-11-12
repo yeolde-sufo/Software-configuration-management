@@ -10,7 +10,7 @@ const themeToggle = document.getElementById("theme-toggle");
 function updateProgress() {
   const total = checkboxes.length;
   const done = checkboxes.filter((box) => box.checked).length;
-  const percent = Math.round((done / total) * 100);
+  const percent = Math.round((done / total) * 100)
 
   progressBar.style.width = `${percent}%`;
   progressText.textContent = `${done} of ${total} practices ticked (${percent}%)`;
