@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Configuration Management Demo</title>
+  <meta name="description" content="A static site showing a CI/CD pipeline with automated linting and GitHub Pages deployment.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Software Configuration Management</h1>
+    <p class="tagline">Version control, CI/CD, and DevOps in one small project</p>
+    <button id="theme-toggle" class="btn" type="button">Switch to dark</button>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>The automated pipeline</h2>
+      <p>Every push to <code>main</code> runs the same steps automatically. If the linter finds a problem, the site is not deployed.</p>
+      <ol class="pipeline" aria-label="Deployment pipeline">
+        <li>Push commit</li>
+        <li>Lint JavaScript</li>
+        <li>Package site</li>
+        <li>Deploy to Pages</li>
+        <li>Live site</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Pipeline checklist</h2>
+      <p>Tick off the SCM practices this project uses.</p>
+      <ul class="checklist">
+        <li><label><input type="checkbox" class="stage-check"> Version control with Git</label></li>
+        <li><label><input type="checkbox" class="stage-check"> Code review through pull requests</label></li>
+        <li><label><input type="checkbox" class="stage-check"> Continuous integration (GitHub Actions)</label></li>
+        <li><label><input type="checkbox" class="stage-check"> Static analysis with ESLint</label></li>
+        <li><label><input type="checkbox" class="stage-check"> Continuous delivery to GitHub Pages</label></li>
+        <li><label><input type="checkbox" class="stage-check"> Feedback from failed builds</label></li>
+      </ul>
+      <div class="progress" role="progressbar" aria-labelledby="progress-text" aria-valuemin="0" aria-valuemax="100">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <p id="progress-text" class="progress-text"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with HTML, CSS, and JavaScript. Deployed by GitHub Actions.</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

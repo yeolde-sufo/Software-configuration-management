@@ -1,0 +1,13 @@
+{
+  "name": "scm-pipeline-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site with an automated JavaScript lint gate before GitHub Pages deployment.",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}
